@@ -81,10 +81,14 @@ int insert_item(HashTable *ht, char *key, char *value) {
 
     // Create Item.
     Item *item = (Item *) malloc(sizeof(Item));
-    item->key = (char *) malloc(sizeof(strlen(key) + 1));
-    item->value = (char *) malloc(sizeof(strlen(value) + 1));
-    strncpy(item->key, key, strlen(key) + 1);
-    strncpy(item->value, value, strlen(key) + 1);
+    
+    size_t size_of_value = strlen(value) + 1;
+    
+    item->key = (char *) malloc(size_of_value);
+    item->value = (char *) malloc(size_of_value);
+    
+    strncpy(item->key, key, size_of_value);
+    strncpy(item->value, value, size_of_value);
 
     // Compute index.
     pos = hash_function(ht, key);
