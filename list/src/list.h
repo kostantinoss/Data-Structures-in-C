@@ -31,6 +31,11 @@ Get number of items in list.
 int get_item_count(List *list);
 
 /*
+Print list.
+*/
+void print_list(List *list);
+
+/*
 Fre allocated memory.
 */
-void free(List *list);
+void free_list(List *list);

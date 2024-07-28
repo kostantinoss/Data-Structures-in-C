@@ -23,4 +23,4 @@ $(BUILD_DIR)/list.o: $(SRC_DIR)/list.c
 	$(CC) $(CFLAGS) -c $(SRC_DIR)/list.c -o $(BUILD_DIR)/list.o
 
 clean:
-	rm -rf $(BIN_DIR)/$(TARGET) $(BUILD_DIR)/*.o
+	rm -rf $(BUILD_DIR)/*.o
