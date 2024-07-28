@@ -16,6 +16,8 @@ typedef struct HashTable {
     int capacity;
 } HashTable;
 
+int *a;
+
 HashTable* create_hash_table(int capacity);
 
 Item* get_item(HashTable* table, char* key);
@@ -31,4 +33,3 @@ int insert_item(HashTable *ht, char *key, char *value);
 void print_table(HashTable *table);
 
 void free_table(HashTable *table);
-
